@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Hello</title>
+    </head>
+
+    <body>
+        <p th:text="'hello ' + ${name}" > hello! empty</p>
+        <!--hello! empty 부분은 서버를 돌리지않고
+        html 자체를 열었을때만 보이는 부분. 사실상 없어도 무관하다.-->
+    </body>
+</html>
