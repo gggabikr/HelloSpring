@@ -75,7 +75,7 @@ class memberServiceTest {
         //위 부분에서 command+option+v 를 누르면 아래처럼 만들어진다.
         IllegalStateException e = assertThrows(IllegalStateException.class, () -> memberService.join(member2));
         assertThat(e.getMessage()).isEqualTo("이미 존재하는 회원입니다.");
-        
+
         //then
 
 
