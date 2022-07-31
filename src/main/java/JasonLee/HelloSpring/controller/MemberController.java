@@ -23,6 +23,7 @@ public class MemberController {
     //이전 테스트에서는 개발자가 직접 주입했고, 여기서는 @Autowired에 의해 스프링이 주입해준다.
     public MemberController(JasonLee.HelloSpring.service.memberService memberService) {
         this.memberService = memberService;
+//        System.out.println(memberService.getClass());
     }
 
     @GetMapping("/members/new")
