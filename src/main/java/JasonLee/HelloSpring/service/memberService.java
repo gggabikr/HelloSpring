@@ -28,6 +28,9 @@ public class memberService {
         //Optional이 아니면 if(result == !null)~~ 이렇게 가야한다.
 
         //그러나 굳이 result로 할필요없이 바로 하는것도 가능.
+
+        
+
         validateDuplicateMember(member);//중복회원 검증
         memberRepository.save(member);
         return member.getId();
