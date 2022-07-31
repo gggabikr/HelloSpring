@@ -29,11 +29,19 @@ public class memberService {
 
         //그러나 굳이 result로 할필요없이 바로 하는것도 가능.
 
-        
 
-        validateDuplicateMember(member);//중복회원 검증
-        memberRepository.save(member);
-        return member.getId();
+        //타임측정 로직
+//        long start = System.currentTimeMillis();
+//
+//        try {
+            validateDuplicateMember(member);//중복회원 검증
+            memberRepository.save(member);
+            return member.getId();
+//        }finally {
+//            long finish = System.currentTimeMillis();
+//            long timeMs = finish - start;
+//            System.out.println("join = " + timeMs + "ms");
+//        }
     }
 
     private void validateDuplicateMember(Member member) {
