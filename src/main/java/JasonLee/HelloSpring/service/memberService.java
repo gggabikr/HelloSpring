@@ -3,11 +3,13 @@ package JasonLee.HelloSpring.service;
 import JasonLee.HelloSpring.domain.Member;
 import JasonLee.HelloSpring.repository.MemberRepository;
 import JasonLee.HelloSpring.repository.MemoryMemberRepository;
+import org.springframework.transaction.annotation.Transactional;
 
 
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
 public class memberService {
     private final MemberRepository memberRepository;
 
